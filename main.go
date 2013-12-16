@@ -51,7 +51,7 @@ func (this FileServerHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) 
 		list := listFile(f)
 		// log.Printf("%v", rows)
 
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		// w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		t := template.New("index")
 		t, err := t.ParseFiles("index.tmpl")
 		if err != nil {
