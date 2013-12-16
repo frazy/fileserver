@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>文件系统 - lazylei.com</title>
+<style type="text/css">
+body { font:82% arial,sans-serif; width:800px; margin: 5px auto; line-height: 20px; }
+table { border-top: #cccccc solid 1px; border-right: #cccccc solid 1px; border-left: #cccccc solid 1px; }
+th { border-bottom: #cccccc solid 1px; border-left: #cccccc solid 1px; text-align: left; background-color:#f4f4ff; }
+td { border-bottom: #cccccc solid 1px; text-align: left; }
+tr:hover { color:#009; background-color:#f4f4ff; }
+a { color:blue; }
+a:hover,a:active { color:red; }
+.th-first { border-left: 0; width:20px; }
+.th-name {  }
+.th-time { width:80px; }
+.th-size { width:60px; }
+#footer { float: right; margin: 10px 5px; color: #cccccc; }
+</style>
+</head>
+<body>
+    <div>
+        <table cellspacing="0" cellpadding="2" border="0" width="100%">
+        <tr><th class="th-first">&nbsp;</th><th class="th-name">Filename</th><th class="th-time">Uploaded</th><th class="th-size">Size</th></tr>
+        <tr><td></td><td><a href="../">../</a></td><td></td><td></td></tr>
+        {{range .}}
+        <tr><td></td><td><a href="{{.Filename}}">{{.Filename}}</a></td><td>{{.Uploaded}}</td><td>{{.Size}}</td></tr>
+        {{end}}
+        </table>
+    </div>
+    <div id="footer">&copy; 2013 lazylei.com. Powered by <a href="http://golang.org/" target="_blank">golang</a>.</div>
+</body>
+</html>
